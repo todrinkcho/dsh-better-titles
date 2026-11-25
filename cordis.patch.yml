@@ -1,0 +1,21 @@
+# Disable the built-in first-prompt titler: the session-title service accepts a
+# single provider, and this bundle registers its own.
+- id: session-title-llm
+  disabled: true
+
+- insert:
+    - id: session-title-latest
+      name: '@todrink/dsh-better-titles'
+      config:
+        # How many newest human messages the title is derived from.
+        count: 2
+        targetWords: 5
+        targetCjkCharacters: 10
+        # The helper throws when the payload exceeds this budget; the provider
+        # trims the payload itself, so a generous budget only costs tokens.
+        maxInputBytes: 8192
+        maxOutputTokens: 512
+        timeoutMs: 60000
+        # Un-pin a Session branched by the fork flow ("Name (1)") on its first
+        # new human message, so the normal per-message updates apply again.
+        unpinForkedTitles: true

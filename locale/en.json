@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Titles follow the latest messages",
+    "description": "Regenerates the session title from the two newest human messages, so a moved focus changes the title; replaces the built-in experimental conversation-following titles."
+  }
+}

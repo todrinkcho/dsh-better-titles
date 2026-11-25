@@ -1,0 +1,52 @@
+{
+  "name": "@todrink/dsh-better-titles",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Refresh session titles from the newest human messages instead of the first one.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "input.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18",
+    "dsh": ">=0.2.2-rc.5"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "session",
+    "title",
+    "summary",
+    "ui"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "todrink",
+    "url": "https://github.com/todrinkcho"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/todrinkcho/dsh-better-titles.git"
+  },
+  "homepage": "https://github.com/todrinkcho/dsh-better-titles#readme",
+  "bugs": {
+    "url": "https://github.com/todrinkcho/dsh-better-titles/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
