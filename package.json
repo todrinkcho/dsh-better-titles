@@ -1,6 +1,6 @@
 {
   "name": "@todrink/dsh-better-titles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Refresh session titles from the newest human messages instead of the first one.",
   "exports": {
